@@ -77,7 +77,7 @@ export default {
   cursor: pointer;
   position: absolute;
   left: 5%;
-  top: 3rem;
+  top: 5rem;
   color: rgba(255, 255, 255, 0.787);
 }
 </style>

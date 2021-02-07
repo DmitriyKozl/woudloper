@@ -34,8 +34,7 @@ export default {
         {
           day: "8",
           month: "februari",
-          text:
-            "Cursus koffie zetten voor bejaarden met een allergie voor noten."
+          text: "Cursus noten kraken voor bejaarden met een noten allergie."
         },
         {
           day: "2",
@@ -67,7 +66,7 @@ header {
   h1 {
     font-size: 4rem;
     color: white;
-    margin: 1.5rem auto auto 10rem;
+    margin: 3.5rem auto auto 10rem;
   }
 }
 
@@ -82,14 +81,16 @@ header {
   h1 {
     font-size: 3rem;
     text-align: left;
-    min-width: 80%;
-    margin: auto;
+    width: 80%;
+    margin-right: auto;
+    margin-left: 10%;
+
     color: white;
   }
   &__item {
     @include flexCentered();
     box-shadow: 3px 3px 7px 0px rgb(27, 27, 27);
-    border-radius: 10px;
+    border-radius: 16px;
     border: 1px solid white;
     // border-bottom: 1px solid #264653;
     width: 80%;
@@ -97,8 +98,8 @@ header {
     margin: 2rem auto;
     justify-content: space-between;
     &__date {
-      border-bottom-left-radius: 10px;
-      border-top-left-radius: 10px;
+      border-bottom-left-radius: 15px;
+      border-top-left-radius: 15px;
 
       @include flexCentered();
       flex-direction: column;
@@ -122,7 +123,7 @@ header {
       padding: 1rem 1rem 1rem;
       // width: 80%;
       background-color: white;
-      border-radius: 10px;
+      border-radius: 15px;
       border-bottom-left-radius: 0;
 
       h3 {

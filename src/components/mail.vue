@@ -1,8 +1,5 @@
 <template>
   <div class="container">
-    <div class="container-img">
-      <img src="@/assets/images/tent.jpg" alt="" />
-    </div>
     <form class="form" @submit.prevent="submit">
       <h1>Contacteer ons</h1>
       <div class="form-content">
@@ -31,70 +28,45 @@
           v-model="email.value"
         />
       </div>
-      <Select @change="activate()" />
-      <div class="form-phone" :class="{ active: mailFormIsActive }">
-        <label class="label" for="phone">Telefoon nummer</label>
-        <input name="phone" id="phone" required="" v-model="phone.value" />
-      </div>
-      <div class="form-child">
-        <label class="label" for="child">Voornaam en voornaam kind</label>
-        <input
-          type="text"
-          name="childName"
-          id="child"
-          required=""
-          v-model="child"
-        />
-      </div>
       <div class="form-text">
         <label class="label" for="textarea">Bericht</label>
         <textarea
           class="message"
           name="textarea"
+          id="textarea"
           required=""
           v-model="message.text"
+          :maxlength="message.maxlength"
         ></textarea>
       </div>
-      <div class="button">
-        <button type="submit">submit</button>
-      </div>
     </form>
+    <div class="right-content">
+      <div class="button">
+        <input type="submit" value="submit" />
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-import Select from "@/components/select.vue";
 export default {
-  name: "Contact",
-  components: {
-    Select
-  },
+  name: "Mail",
   data: function() {
     return {
-      mailFormIsActive: false,
-
       name: "",
       surname: "",
-      child: "",
+
       email: {
         value: "",
         valid: true
       },
-      phone: {
-        value: "",
-        valid: true
-      },
+
       message: {
         text: ``,
         maxlength: 255
       },
       submitted: false
     };
-  },
-  methods: {
-    activate() {
-      this.mailFormIsActive = true;
-    }
   }
 };
 </script>
@@ -107,18 +79,11 @@ export default {
   justify-content: center;
 }
 .container {
-  background-color: #264653;
+  background-color: white;
   // border: solid 0.2rem #264653;
-  height: 100vh;
+  border-left: none;
+  height: 60vh;
   @include flexCenter();
-  &-img {
-    width: 40%;
-    height: 100%;
-    img {
-      width: 100%;
-      height: 100%;
-    }
-  }
   h1 {
     width: 70%;
     color: white;
@@ -137,7 +102,6 @@ export default {
       color: #264653;
       width: 70%;
       margin: 1rem auto;
-
       &-name,
       &-surname {
         @include flexCenter();
@@ -147,9 +111,7 @@ export default {
         color: white;
       }
     }
-    &-email,
-    &-phone,
-    &-child {
+    &-email {
       @include flexCenter();
       flex-direction: column;
       text-align: left;
@@ -157,12 +119,6 @@ export default {
       width: 70%;
       margin: 1rem auto;
     }
-    // .message,
-    // &-phone,
-    // &-child,
-    // &-text {
-    //   display: none;
-    // }
     &-text {
       @include flexCenter();
       flex-direction: column;
@@ -177,24 +133,6 @@ export default {
       border: none;
       border-bottom: 1px solid white;
       background-color: #264653;
-      color: white;
-    }
-    .button {
-      // margin: auto;
-      button {
-        padding: 0.5rem 3rem 0.5rem 3rem;
-        margin: 1rem 0.1rem 0.1rem 0;
-        border: none;
-        border-radius: 2rem;
-        // box-sizing: border-box;
-        text-decoration: none;
-        font-family: "Nanum Gothic", sans-serif;
-        font-weight: 800;
-        font-size: 1.4rem;
-        color: #264653;
-        text-align: center;
-        background-color: white;
-      }
     }
   }
   input {
@@ -203,11 +141,36 @@ export default {
     border: none;
     border-bottom: 1px solid white;
     outline: none;
-    color: white;
-    font-size: 1.2rem;
   }
-  label {
-    font-size: 1.2rem;
+  .right-content {
+    @include flexCenter();
+
+    width: 40%;
+    background-image: url("../assets/images/park.png");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+
+    .button {
+      margin: auto;
+      input {
+        padding: 0.4rem 6rem 3rem 6rem;
+        margin: 0 0.1rem 0.1rem 0;
+
+        border-radius: 2rem;
+        box-sizing: border-box;
+        text-decoration: none;
+        font-family: "Nanum Gothic", sans-serif;
+        font-weight: 600;
+        font-size: 2rem;
+        color: white;
+
+        text-shadow: 0 0.04em 0.04em rgba(0, 0, 0, 0.35);
+        text-align: center;
+        transition: all 0.2s;
+        background-color: #264653;
+      }
+    }
   }
 }
 </style>
