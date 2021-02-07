@@ -74,21 +74,24 @@ header {
 .eventList {
   @include flexCentered();
   flex-direction: column;
-  width: 80%;
-  margin: auto;
-  padding: 6rem 0;
+  // width: 80%;
+  // margin: auto;
+  padding: 4rem 0;
+  background-color: #264653;
 
   h1 {
     font-size: 3rem;
     text-align: left;
     min-width: 80%;
     margin: auto;
+    color: white;
   }
   &__item {
     @include flexCentered();
-    border-bottom-left-radius: 10px;
-
-    border-bottom: 1px solid #264653;
+    box-shadow: 3px 3px 7px 0px rgb(27, 27, 27);
+    border-radius: 10px;
+    border: 1px solid white;
+    // border-bottom: 1px solid #264653;
     width: 80%;
     min-height: 150px;
     margin: 2rem auto;
@@ -118,11 +121,23 @@ header {
       text-align: left;
       padding: 1rem 1rem 1rem;
       // width: 80%;
+      background-color: white;
+      border-radius: 10px;
+      border-bottom-left-radius: 0;
+
       h3 {
-        font-size: 1.5rem;
+        font-size: 1.7rem;
         margin-right: auto;
         margin-top: 0;
+        color: #264653;
+        text-shadow: 2px 3px 7px 3px rgb(47, 47, 47);
+
         width: 80%;
+      }
+      p {
+        font-weight: bolder;
+        color: #264653;
+        line-height: 1.3;
       }
     }
   }
