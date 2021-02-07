@@ -1,5 +1,5 @@
 <template>
-  <div class="container waiting">
+  <div class="container">
     <div class="container-img">
       <img src="@/assets/images/tent.jpg" alt="" />
     </div>
@@ -30,6 +30,20 @@
           required=""
           v-model="email.value"
         />
+      </div>
+      <div class="selectContainer">
+        <label class="selectContainer-select" for="subject">onderwerp</label>
+        <select
+          class="selectContainer-select-control"
+          id="subject"
+          name="subject"
+          required
+        >
+          <option value="subject" selected disabled>Onderewerp</option>
+          <option value="Wachtlijst">Wachtlijst</option>
+          <option value="Mailing">Mailing lijst</option>
+          <option value="Question">Een doodnormale vraag</option>
+        </select>
       </div>
       <div class="form-text">
         <label class="label" for="textarea">Bericht</label>
