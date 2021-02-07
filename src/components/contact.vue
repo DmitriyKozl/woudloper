@@ -59,16 +59,16 @@ export default {
 
       email: {
         value: "",
-        valid: true,
+        valid: true
       },
 
       message: {
         text: ``,
-        maxlength: 255,
+        maxlength: 255
       },
-      submitted: false,
+      submitted: false
     };
-  },
+  }
 };
 </script>
 

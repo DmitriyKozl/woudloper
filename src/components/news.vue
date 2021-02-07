@@ -3,7 +3,7 @@
     <section v-for="item in items" :key="item">
       <div
         :style="{
-          'background-image': 'url(' + require('@/assets/' + item.image) + ')',
+          'background-image': 'url(' + require('@/assets/' + item.image) + ')'
         }"
         class="preview_img"
       ></div>
@@ -30,10 +30,10 @@ export default {
         { text: "voorstelling Leiding", image: "images/scout.jpg" },
         { text: "Inschrijving 2020-2021", image: "images/letter.jpg" },
         { text: "Info begin scoutsjaar", image: "images/desk.jpg" },
-        { text: "Totem namen", image: "images/totem.jpg" },
-      ],
+        { text: "Totem namen", image: "images/totem.jpg" }
+      ]
     };
-  },
+  }
 };
 </script>
 
