@@ -1,9 +1,15 @@
 <template>
-  <div >
+  <Nav />
+  <div>
     <router-view />
   </div>
-</template> 
-
+</template>
+<script>
+import Nav from "@/components/nav.vue";
+export default {
+  components: { Nav }
+};
+</script>
 <style lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;

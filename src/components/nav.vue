@@ -3,19 +3,18 @@
     <span class="hamburger" @click="activate()">&#9776;</span>
 
     <div :class="{ active: sideNavIsActive }" class="sidenav">
-      <a href="javascript:void(0)" class="closebtn" @click="close()">&times;</a>
-      <a href="#info">wie zijn we</a>
-      <a href="#home">home</a>
-      <a href="elements.html">nieuws</a>
-      <a href="index.html">contact</a>
-      <a href="generic.html">agenda</a>
-      <a href="index.html">praktisch</a>
+      <a class="closebtn" @click="close()">&times;</a>
+      <router-link to="/info" @click="close()">wie zijn we</router-link>
+      <router-link to="/home" @click="close()">home</router-link>
+      <router-link to="/nieuws" @click="close()">nieuws</router-link>
+      <router-link to="/contact" @click="close()">contact</router-link>
+      <router-link to="/agenda" @click="close()">agenda</router-link>
+      <router-link to="/praktisch" @click="close()">praktisch</router-link>
     </div>
   </header>
 </template>
 
 <script>
-
 export default {
   name: "Nav",
   data() {
