@@ -1,7 +1,6 @@
 <template>
   <div>
     <section class="banner content">
-      <Nav />
       <div class="banner">
         <div class="banner__text">
           <h2>Scoutsgroep</h2>
@@ -15,16 +14,12 @@
 </template>
 
 <script>
-import Nav from "@/components/nav.vue";
 import News from "@/components/news.vue";
-import Footer from "@/components/contact.vue";
 
 export default {
   name: "Home",
   components: {
-    Nav,
-    News,
-    Footer
+    News
   }
 };
 </script>

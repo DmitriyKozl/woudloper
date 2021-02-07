@@ -1,9 +1,16 @@
 <template>
-  <div>
-    <router-view />
-  </div>
+  <Nav />
+  <router-view />
+  <Footer />
 </template>
 
+<script>
+import Nav from "@/components/Nav";
+import Footer from "@/components/Footer";
+export default {
+  components: { Nav, Footer }
+};
+</script>
 <style lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;

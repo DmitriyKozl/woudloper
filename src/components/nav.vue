@@ -3,13 +3,15 @@
     <span class="hamburger" @click="activate()">&#9776;</span>
 
     <div :class="{ active: sideNavIsActive }" class="sidenav">
-      <a href="javascript:void(0)" class="closebtn" @click="close()">&times;</a>
-      <a href="#info">wie zijn we</a>
-      <a href="#home">home</a>
-      <a href="elements.html">nieuws</a>
-      <a href="index.html">contact</a>
-      <a href="generic.html">agenda</a>
-      <a href="index.html">praktisch</a>
+      <a class="closebtn" @click="close()">&times;</a>
+      <div
+        v-for="link in links"
+        :key="link.path"
+        :class="{ activeLink: $route.path === link.path }"
+        @click="close()"
+      >
+        <router-link :to="link.path">{{ link.label }}</router-link>
+      </div>
     </div>
   </header>
 </template>
@@ -19,7 +21,33 @@ export default {
   name: "Nav",
   data() {
     return {
-      sideNavIsActive: false
+      sideNavIsActive: false,
+      links: [
+        {
+          label: "Home",
+          path: "/"
+        },
+        {
+          label: "We zijn we?",
+          path: "/wiezijnwe"
+        },
+        {
+          label: "Nieuws",
+          path: "/nieuws"
+        },
+        {
+          label: "Contact",
+          path: "/contact"
+        },
+        {
+          label: "Agenda",
+          path: "/agenda"
+        },
+        {
+          label: "Praktisch",
+          path: "/praktisch"
+        }
+      ]
     };
   },
   methods: {
@@ -71,6 +99,7 @@ export default {
   right: 25px;
   font-size: 36px;
   margin-left: 50px;
+  cursor: pointer;
 }
 .hamburger {
   font-size: 30px;
@@ -79,5 +108,9 @@ export default {
   left: 5%;
   top: 3rem;
   color: rgba(255, 255, 255, 0.787);
+}
+
+.activeLink {
+  font-weight: bold;
 }
 </style>
