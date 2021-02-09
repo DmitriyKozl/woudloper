@@ -101,7 +101,7 @@ export default {
   font-size: 30px;
   cursor: pointer;
   position: absolute;
-  left: 5%;
+  left: 3%;
   top: 3rem;
   color: rgba(255, 255, 255, 0.787);
 }
