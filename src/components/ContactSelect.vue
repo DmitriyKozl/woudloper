@@ -22,7 +22,7 @@
 
 <script>
 export default {
-  name: 'Select',
+  name: 'ContactSelect',
   data() {
     return {
       selected: '',

@@ -1,6 +1,8 @@
 <template>
   <div>
-    <header><h1>Agenda</h1></header>
+    <header>
+      <h1>{{ title }}</h1>
+    </header>
 
     <section class="eventList">
       <h1>2022</h1>
@@ -27,29 +29,38 @@
 
 <script>
 export default {
-  name: "Agenda",
+  name: 'Agenda',
+  props: {
+    title: {
+      type: String,
+      required: true,
+    },
+  },
+  mounted() {
+    console.log(this.title);
+  },
   data() {
     return {
       events: [
         {
-          day: "8",
-          month: "februari",
+          day: '8',
+          month: 'februari',
           text:
-            "Cursus koffie zetten voor bejaarden met een allergie voor noten."
+            'Cursus koffie zetten voor bejaarden met een allergie voor noten.',
         },
         {
-          day: "2",
-          month: "maart",
-          text: "Funk voor doven."
+          day: '2',
+          month: 'maart',
+          text: 'Funk voor doven.',
         },
         {
-          day: "28",
-          month: "juli",
-          text: "Dwergsmijten voor gevorderden"
-        }
-      ]
+          day: '28',
+          month: 'juli',
+          text: 'Dwergsmijten voor gevorderden',
+        },
+      ],
     };
-  }
+  },
 };
 </script>
 

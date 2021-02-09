@@ -19,35 +19,10 @@
 <script>
 export default {
   name: 'Nav',
+  props: { links: { type: Array, required: true } },
   data() {
     return {
       sideNavIsActive: false,
-      links: [
-        {
-          label: 'Home',
-          path: '/',
-        },
-        {
-          label: 'We zijn we?',
-          path: '/wie-zijn-we',
-        },
-        {
-          label: 'Nieuws',
-          path: '/nieuws',
-        },
-        {
-          label: 'Contact',
-          path: '/contact',
-        },
-        {
-          label: 'Agenda',
-          path: '/agenda',
-        },
-        {
-          label: 'Praktisch',
-          path: '/praktisch',
-        },
-      ],
     };
   },
   methods: {
