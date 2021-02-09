@@ -1,47 +1,47 @@
-import { createRouter, createWebHashHistory } from "vue-router";
-import Home from "@/views/Home";
-import WieZijnWe from "@/views/WieZijnWe";
-import Nieuws from "@/views/Nieuws";
-import Contact from "@/views/Contact";
-import Agenda from "@/views/Agenda";
-import Praktisch from "@/views/Praktisch";
+import { createRouter, createWebHashHistory } from 'vue-router';
+import Home from '@/views/home';
+import WieZijnWe from '@/views/wie-zijn-we';
+import Nieuws from '@/views/nieuws';
+import Contact from '@/views/contact';
+import Agenda from '@/views/agenda';
+import Praktisch from '@/views/praktisch';
 
 const routes = [
   {
-    path: "/",
-    name: "Home",
-    component: Home
+    path: '/',
+    name: 'Home',
+    component: Home,
   },
   {
-    path: "/wiezijnwe",
-    name: "WieZijnWe",
-    component: WieZijnWe
+    path: '/wie-zijn-we',
+    name: 'WieZijnWe',
+    component: WieZijnWe,
   },
   {
-    path: "/nieuws",
-    name: "Nieuws",
-    component: Nieuws
+    path: '/nieuws',
+    name: 'Nieuws',
+    component: Nieuws,
   },
   {
-    path: "/contact",
-    name: "Contact",
-    component: Contact
+    path: '/contact',
+    name: 'Contact',
+    component: Contact,
   },
   {
-    path: "/agenda",
-    name: "Agenda",
-    component: Agenda
+    path: '/agenda',
+    name: 'Agenda',
+    component: Agenda,
   },
   {
-    path: "/praktisch",
-    name: "Praktisch",
-    component: Praktisch
-  }
+    path: '/praktisch',
+    name: 'Praktisch',
+    component: Praktisch,
+  },
 ];
 
 const router = createRouter({
   history: createWebHashHistory(),
-  routes
+  routes,
 });
 
 export default router;

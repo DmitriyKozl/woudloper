@@ -1,12 +1,12 @@
 <template>
   <div>
-    <header><h1>Wie zijn we?</h1></header>
+    <header><h1>Praktisch</h1></header>
   </div>
 </template>
 
 <script>
 export default {
-  name: "WieZijnWe"
+  name: 'Praktisch',
 };
 </script>
 

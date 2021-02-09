@@ -1,6 +1,5 @@
 <template>
   <div>
-    <Header />
     <section class="news">
       <section class="newest">
         <div class="news__header">
@@ -51,10 +50,14 @@
 </template>
 
 <script>
-import Header from "@/components/Header";
 export default {
-  name: "Nieuws",
-  components: { Header }
+  name: 'Nieuws',
+  props: {
+    title: {
+      type: String,
+      required: true,
+    },
+  },
 };
 </script>
 

@@ -1,6 +1,8 @@
 <template>
   <div>
-    <header><h1>Agenda</h1></header>
+    <header>
+      <h1>{{ title }}</h1>
+    </header>
 
     <section class="eventList">
       <h1>2022</h1>
@@ -27,29 +29,38 @@
 
 <script>
 export default {
-  name: "Agenda",
+  name: 'Agenda',
+  props: {
+    title: {
+      type: String,
+      required: true,
+    },
+  },
+  mounted() {
+    console.log(this.title);
+  },
   data() {
     return {
       events: [
         {
-          day: "8",
-          month: "februari",
+          day: '8',
+          month: 'februari',
           text:
-            "Cursus koffie zetten voor bejaarden met een allergie voor noten."
+            'Cursus koffie zetten voor bejaarden met een allergie voor noten.',
         },
         {
-          day: "2",
-          month: "maart",
-          text: "Funk voor doven."
+          day: '2',
+          month: 'maart',
+          text: 'Funk voor doven.',
         },
         {
-          day: "28",
-          month: "juli",
-          text: "Dwergsmijten voor gevorderden"
-        }
-      ]
+          day: '28',
+          month: 'juli',
+          text: 'Dwergsmijten voor gevorderden',
+        },
+      ],
     };
-  }
+  },
 };
 </script>
 
@@ -67,9 +78,10 @@ header {
   h1 {
     font-size: 4rem;
     color: white;
-    margin: 1.5rem auto auto 10rem;
+    margin: 3.5rem auto auto 10rem;
   }
 }
+
 .eventList {
   @include flexCentered();
   flex-direction: column;
@@ -77,17 +89,20 @@ header {
   // margin: auto;
   padding: 4rem 0;
   background-color: #264653;
+
   h1 {
     font-size: 3rem;
     text-align: left;
-    min-width: 80%;
-    margin: auto;
+    width: 80%;
+    margin-right: auto;
+    margin-left: 10%;
+
     color: white;
   }
   &__item {
     @include flexCentered();
     box-shadow: 3px 3px 7px 0px rgb(27, 27, 27);
-    border-radius: 10px;
+    border-radius: 16px;
     border: 1px solid white;
     // border-bottom: 1px solid #264653;
     width: 80%;
@@ -95,14 +110,16 @@ header {
     margin: 2rem auto;
     justify-content: space-between;
     &__date {
-      border-bottom-left-radius: 10px;
-      border-top-left-radius: 10px;
+      border-bottom-left-radius: 15px;
+      border-top-left-radius: 15px;
+
       @include flexCentered();
       flex-direction: column;
       color: white;
       background-color: #264653;
       padding: 2rem 0;
       min-width: 200px;
+
       h2 {
         font-size: 3rem;
         text-align: center;
@@ -118,8 +135,9 @@ header {
       padding: 1rem 1rem 1rem;
       // width: 80%;
       background-color: white;
-      border-radius: 10px;
+      border-radius: 15px;
       border-bottom-left-radius: 0;
+
       h3 {
         font-size: 1.7rem;
         margin-right: auto;

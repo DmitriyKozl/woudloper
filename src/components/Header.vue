@@ -1,27 +1,20 @@
 <template>
   <div>
     <header>
-      <h1>Nieuws</h1>
+      <h1>{{ title }}</h1>
     </header>
   </div>
 </template>
 
 <script>
 export default {
-  name: "Header"
-  // components: { Nav },
-  // data() {
-  //   return {
-  //     label: [
-  //       "Home",
-  //       "We zijn we?",
-  //       "Nieuws",
-  //       "Contact",
-  //       "Agenda",
-  //       "Praktisch",
-  //     ],
-  //   };
-  // },
+  name: 'Header',
+  props: {
+    title: {
+      type: String,
+      required: true,
+    },
+  },
 };
 </script>
 
