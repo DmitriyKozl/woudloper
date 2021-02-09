@@ -4,12 +4,14 @@
 
     <div :class="{ active: sideNavIsActive }" class="sidenav">
       <a class="closebtn" @click="close()">&times;</a>
-      <router-link to="/info" @click="close()">wie zijn we</router-link>
-      <router-link to="/home" @click="close()">home</router-link>
-      <router-link to="/nieuws" @click="close()">nieuws</router-link>
-      <router-link to="/contact" @click="close()">contact</router-link>
-      <router-link to="/agenda" @click="close()">agenda</router-link>
-      <router-link to="/praktisch" @click="close()">praktisch</router-link>
+      <div
+        v-for="link in links"
+        :key="link.path"
+        :class="{ activeLink: $route.path === link.path }"
+        @click="close()"
+      >
+        <router-link :to="link.path">{{ link.label }}</router-link>
+      </div>
     </div>
   </header>
 </template>
@@ -19,7 +21,33 @@ export default {
   name: "Nav",
   data() {
     return {
-      sideNavIsActive: false
+      sideNavIsActive: false,
+      links: [
+        {
+          label: "Home",
+          path: "/"
+        },
+        {
+          label: "We zijn we?",
+          path: "/wiezijnwe"
+        },
+        {
+          label: "Nieuws",
+          path: "/nieuws"
+        },
+        {
+          label: "Contact",
+          path: "/contact"
+        },
+        {
+          label: "Agenda",
+          path: "/agenda"
+        },
+        {
+          label: "Praktisch",
+          path: "/praktisch"
+        }
+      ]
     };
   },
   methods: {
@@ -47,11 +75,9 @@ export default {
   transition: 0.5s;
   padding-top: 60px;
 }
-
 .active {
   width: 250px;
 }
-
 .sidenav a {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
@@ -60,24 +86,26 @@ export default {
   display: block;
   transition: 0.3s;
 }
-
 .sidenav a:hover {
   color: #f1f1f1;
 }
-
 .closebtn {
   position: absolute;
   top: 0;
   right: 25px;
   font-size: 36px;
   margin-left: 50px;
+  cursor: pointer;
 }
 .hamburger {
   font-size: 30px;
   cursor: pointer;
   position: absolute;
   left: 5%;
-  top: 5rem;
+  top: 3rem;
   color: rgba(255, 255, 255, 0.787);
+}
+.activeLink {
+  font-weight: bold;
 }
 </style>
