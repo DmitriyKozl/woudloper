@@ -2,32 +2,66 @@
   <div class="selectContainer">
     <label class="selectContainer-select" for="subject">Onderwerp</label>
     <select
+      @change="onchange(selected)"
+      v-model="selected"
       class="selectContainer-control"
       id="subject"
       name="subject"
       required
     >
-      <option value="Question">Een doodnormale vraag</option>
-      <option value="Wachtlijst">Wachtlijst</option>
-      <option value="Mailing">Mailing lijst</option>
+      <option
+        v-for="option in options"
+        v-bind:key="option.value"
+        :value="option.value"
+      >
+        {{ option.text }}
+      </option>
     </select>
   </div>
 </template>
 
 <script>
 export default {
-  name: "Select"
+  name: "Select",
+  data() {
+    return {
+      selected: "",
+      selectedText: ``,
+      options: [
+        {
+          text: "Een doodnormale vraag",
+          value: "Question"
+        },
+        {
+          text: "Wachtlijst",
+          value: "Wachtlijst"
+        },
+        {
+          text: "Mailing lijst",
+          value: "Mailing"
+        }
+      ]
+    };
+  },
+  methods: {
+    onchange: function(val) {
+      for (let i = 0; i < this.options.length; i++) {
+        if (this.options[i].value === val) {
+          //       this.selectedText = this.options[i].input;
+          return this.options[i].input;
+        }
+      }
+    }
+  }
 };
 </script>
 
 <style lang="scss" scoped>
 @import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap");
-
 @mixin flexCenter() {
   display: flex;
   justify-content: center;
 }
-
 .selectContainer {
   @include flexCenter();
   flex-direction: column;
@@ -35,7 +69,6 @@ export default {
   color: white;
   width: 70%;
   margin: 1rem auto;
-
   &-control {
     background-color: #264653;
     border: none;
