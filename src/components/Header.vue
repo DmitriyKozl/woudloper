@@ -9,6 +9,19 @@
 <script>
 export default {
   name: "Header"
+  // components: { Nav },
+  // data() {
+  //   return {
+  //     label: [
+  //       "Home",
+  //       "We zijn we?",
+  //       "Nieuws",
+  //       "Contact",
+  //       "Agenda",
+  //       "Praktisch",
+  //     ],
+  //   };
+  // },
 };
 </script>
 

@@ -1,7 +1,7 @@
 <template>
-  <div class="container waiting">
+  <div class="container">
     <div class="container-img">
-      <img src="../assets/images/tent.png" alt="" />
+      <!-- <img src="@/assets/images/tent.jpg" alt="" /> -->
     </div>
     <form class="form" @submit.prevent="submit">
       <h1>Contacteer ons</h1>
@@ -31,33 +31,42 @@
           v-model="email.value"
         />
       </div>
+      <Select />
+
       <div class="form-text">
         <label class="label" for="textarea">Bericht</label>
         <textarea
           class="message"
           name="textarea"
-          id="textarea"
           required=""
           v-model="message.text"
-          :maxlength="message.maxlength"
         ></textarea>
-
-        <div class="button">
-          <button type="submit">submit</button>
-        </div>
+      </div>
+      <div class="button">
+        <button type="submit">submit</button>
       </div>
     </form>
   </div>
 </template>
 
 <script>
+import Select from "@/components/select.vue";
 export default {
   name: "Contact",
+  components: {
+    Select
+  },
   data: function() {
     return {
+      mailFormIsActive: false,
       name: "",
       surname: "",
+      child: "",
       email: {
+        value: "",
+        valid: true
+      },
+      phone: {
         value: "",
         valid: true
       },
@@ -67,6 +76,47 @@ export default {
       },
       submitted: false
     };
+  },
+  choices: [
+    {
+      name: "wachtlijst",
+      html: `<div class="form-phone" :class="{ active: mailFormIsActive }">
+        <label class="label" for="phone">Telefoon nummer</label>
+        <input name="phone" id="phone" required="" v-model="phone.value" />
+      </div>
+      <div class="form-child">
+        <label class="label" for="child">Naam en voornaam kind</label>
+        <input
+          type="text"
+          name="childName"
+          id="child"
+          required=""
+          v-model="child"
+        />
+      </div>`
+    },
+    {
+      name: "wachtlijst",
+      html: `<div class="form-phone" :class="{ active: mailFormIsActive }">
+        <label class="label" for="phone">Telefoon nummer</label>
+        <input name="phone" id="phone" required="" v-model="phone.value" />
+      </div>
+      <div class="form-child">
+        <label class="label" for="child">Naam en voornaam kind</label>
+        <input
+          type="text"
+          name="childName"
+          id="child"
+          required=""
+          v-model="child"
+        />
+      </div>`
+    }
+  ],
+  methods: {
+    activate() {
+      this.mailFormIsActive = true;
+    }
   }
 };
 </script>
@@ -117,7 +167,9 @@ export default {
         color: white;
       }
     }
-    &-email {
+    &-email,
+    &-phone,
+    &-child {
       @include flexCenter();
       flex-direction: column;
       text-align: left;
@@ -125,6 +177,12 @@ export default {
       width: 70%;
       margin: 1rem auto;
     }
+    // .message,
+    // &-phone,
+    // &-child,
+    // &-text {
+    //   display: none;
+    // }
     &-text {
       @include flexCenter();
       flex-direction: column;
@@ -139,19 +197,20 @@ export default {
       border: none;
       border-bottom: 1px solid white;
       background-color: #264653;
+      color: white;
     }
     .button {
-      margin: auto;
+      // margin: auto;
       button {
-        padding: 1rem 3rem 1rem 3rem;
-        margin: 3rem 0.1rem 0.1rem 0;
+        padding: 0.5rem 3rem 0.5rem 3rem;
+        margin: 1rem 0.1rem 0.1rem 0;
         border: none;
         border-radius: 2rem;
         // box-sizing: border-box;
         text-decoration: none;
         font-family: "Nanum Gothic", sans-serif;
-        font-weight: 600;
-        font-size: 1.2rem;
+        font-weight: 800;
+        font-size: 1.4rem;
         color: #264653;
         text-align: center;
         background-color: white;
@@ -164,6 +223,11 @@ export default {
     border: none;
     border-bottom: 1px solid white;
     outline: none;
+    color: white;
+    font-size: 1.2rem;
+  }
+  label {
+    font-size: 1.2rem;
   }
 }
 </style>
