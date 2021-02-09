@@ -75,11 +75,9 @@ export default {
   transition: 0.5s;
   padding-top: 60px;
 }
-
 .active {
   width: 250px;
 }
-
 .sidenav a {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
@@ -88,11 +86,9 @@ export default {
   display: block;
   transition: 0.3s;
 }
-
 .sidenav a:hover {
   color: #f1f1f1;
 }
-
 .closebtn {
   position: absolute;
   top: 0;
@@ -105,11 +101,10 @@ export default {
   font-size: 30px;
   cursor: pointer;
   position: absolute;
-  left: 5%;
+  left: 3%;
   top: 3rem;
   color: rgba(255, 255, 255, 0.787);
 }
-
 .activeLink {
   font-weight: bold;
 }
