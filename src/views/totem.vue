@@ -22,7 +22,7 @@
       <section v-for="image in bgImages" @click="activate()" :key="image.id">
         <div
           :style="{
-            'background-image': 'url(' + require('@/assets/' + image.src) + ')'
+            'background-image': 'url(' + require('@/assets/' + image.src) + ')',
           }"
           class="preview_img"
         ></div>
@@ -36,7 +36,7 @@
 
 <script>
 export default {
-  name: "Totem",
+  name: 'Totem',
   components: {},
   data() {
     return {
@@ -45,60 +45,60 @@ export default {
       bgImages: [
         {
           id: 1,
-          src: "images/Bedachtzame.jpeg",
-          title: "Bedachtzame Tapir",
-          name: "tapir",
+          src: 'images/Bedachtzame.jpeg',
+          title: 'Bedachtzame Tapir',
+          name: 'tapir',
           text:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid tempora libero consequuntur explicabo reprehenderit in amet ratione harum sed vero."
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid tempora libero consequuntur explicabo reprehenderit in amet ratione harum sed vero.',
         },
         {
           id: 2,
-          src: "images/Bedachtzame.jpeg",
-          title: "Bedachtzame Tapir",
-          name: "tapir",
+          src: 'images/Bedachtzame.jpeg',
+          title: 'Bedachtzame Tapir',
+          name: 'tapir',
           text:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid tempora libero consequuntur explicabo reprehenderit in amet ratione harum sed vero."
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid tempora libero consequuntur explicabo reprehenderit in amet ratione harum sed vero.',
         },
         {
           id: 3,
-          src: "images/Bedachtzame.jpeg",
-          title: "Bedachtzame Tapir",
-          name: "tapir",
+          src: 'images/Bedachtzame.jpeg',
+          title: 'Bedachtzame Tapir',
+          name: 'tapir',
           text:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid tempora libero consequuntur explicabo reprehenderit in amet ratione harum sed vero."
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid tempora libero consequuntur explicabo reprehenderit in amet ratione harum sed vero.',
         },
         {
           id: 4,
-          src: "images/Bedachtzame.jpeg",
-          title: "Bedachtzame Tapir",
-          name: "tapir",
+          src: 'images/Bedachtzame.jpeg',
+          title: 'Bedachtzame Tapir',
+          name: 'tapir',
           text:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid tempora libero consequuntur explicabo reprehenderit in amet ratione harum sed vero."
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid tempora libero consequuntur explicabo reprehenderit in amet ratione harum sed vero.',
         },
         {
           id: 5,
-          src: "images/Bedachtzame.jpeg",
-          title: "Bedachtzame Tapir",
-          name: "tapir",
+          src: 'images/Bedachtzame.jpeg',
+          title: 'Bedachtzame Tapir',
+          name: 'tapir',
           text:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid tempora libero consequuntur explicabo reprehenderit in amet ratione harum sed vero."
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid tempora libero consequuntur explicabo reprehenderit in amet ratione harum sed vero.',
         },
         {
           id: 6,
-          src: "images/Bedachtzame.jpeg",
-          title: "Bedachtzame Tapir",
-          name: "tapir",
+          src: 'images/Bedachtzame.jpeg',
+          title: 'Bedachtzame Tapir',
+          name: 'tapir',
           text:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid tempora libero consequuntur explicabo reprehenderit in amet ratione harum sed vero."
-        }
-      ]
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid tempora libero consequuntur explicabo reprehenderit in amet ratione harum sed vero.',
+        },
+      ],
     };
   },
   methods: {
     activate() {
       this.on = true;
-    }
-  }
+    },
+  },
 };
 </script>
 

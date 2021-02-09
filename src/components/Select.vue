@@ -22,25 +22,25 @@
 
 <script>
 export default {
-  name: "Select",
+  name: 'Select',
   data() {
     return {
-      selected: "",
+      selected: '',
       selectedText: ``,
       options: [
         {
-          text: "Een doodnormale vraag",
-          value: "Question"
+          text: 'Een doodnormale vraag',
+          value: 'Question',
         },
         {
-          text: "Wachtlijst",
-          value: "Wachtlijst"
+          text: 'Wachtlijst',
+          value: 'Wachtlijst',
         },
         {
-          text: "Mailing lijst",
-          value: "Mailing"
-        }
-      ]
+          text: 'Mailing lijst',
+          value: 'Mailing',
+        },
+      ],
     };
   },
   methods: {
@@ -51,13 +51,13 @@ export default {
           return this.options[i].input;
         }
       }
-    }
-  }
+    },
+  },
 };
 </script>
 
 <style lang="scss" scoped>
-@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
 @mixin flexCenter() {
   display: flex;
   justify-content: center;

@@ -18,7 +18,7 @@
         <div
           :style="{
             'background-image':
-              'url(' + require('@/assets/' + image.image) + ')'
+              'url(' + require('@/assets/' + image.image) + ')',
           }"
           class="preview_img"
         ></div>
@@ -27,60 +27,53 @@
         </div>
       </section>
     </div>
-    <Mail />
   </div>
 </template>
 
 <script>
-// import News from "@/components/news.vue";
-import Mail from "@/components/mail.vue";
-
 export default {
-  name: "Home",
-  components: {
-    // News,
-    Mail
-  },
+  name: 'Home',
+  components: {},
   data() {
     return {
       bgImages: [
         {
           id: 1,
-          name: "Totem",
-          text: "Brief Herstkamp",
-          image: "images/autumn.jpg"
+          name: 'Totem',
+          text: 'Brief Herstkamp',
+          image: 'images/autumn.jpg',
         },
         {
           id: 2,
-          name: "Totem",
-          text: "voorstelling Leiding",
-          image: "images/scout.jpg"
+          name: 'Totem',
+          text: 'voorstelling Leiding',
+          image: 'images/scout.jpg',
         },
         {
           id: 3,
-          name: "Totem",
-          text: "Inschrijving 2020-2021",
-          image: "images/letter.jpg"
+          name: 'Totem',
+          text: 'Inschrijving 2020-2021',
+          image: 'images/letter.jpg',
         },
         {
           id: 4,
-          name: "Totem",
-          text: "Info begin scoutsjaar",
-          image: "images/desk.jpg"
+          name: 'Totem',
+          text: 'Info begin scoutsjaar',
+          image: 'images/desk.jpg',
         },
         {
           id: 5,
-          name: "Totem",
-          text: "Totem namen",
-          image: "images/totem.jpg"
-        }
-      ]
+          name: 'Totem',
+          text: 'Totem namen',
+          image: 'images/totem.jpg',
+        },
+      ],
     };
-  }
+  },
 };
 </script>
 <style lang="scss">
-@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
 
 @mixin flexCentered($direction) {
   display: flex;
@@ -90,7 +83,7 @@ export default {
 }
 
 .banner {
-  background-image: url("../assets/images/forest.jpg");
+  background-image: url('../assets/images/forest.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: bottom;
@@ -103,7 +96,7 @@ export default {
     p {
       // margin: 0;
       font-size: 3rem;
-      font-family: "Nanum Gothic";
+      font-family: 'Nanum Gothic';
       font-weight: 600;
       // color: rgba(255, 255, 255, 0.787);
       color: white;

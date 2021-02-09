@@ -50,29 +50,29 @@
 
 <script>
 export default {
-  name: "Mail",
+  name: 'Mail',
   data: function() {
     return {
-      name: "",
-      surname: "",
+      name: '',
+      surname: '',
 
       email: {
-        value: "",
-        valid: true
+        value: '',
+        valid: true,
       },
 
       message: {
         text: ``,
-        maxlength: 255
+        maxlength: 255,
       },
-      submitted: false
+      submitted: false,
     };
-  }
+  },
 };
 </script>
 
 <style lang="scss" scoped>
-@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
 
 @mixin flexCenter() {
   display: flex;
@@ -146,7 +146,7 @@ export default {
     @include flexCenter();
 
     width: 40%;
-    background-image: url("../assets/images/park.png");
+    background-image: url('../assets/images/park.png');
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: cover;
@@ -160,7 +160,7 @@ export default {
         border-radius: 2rem;
         box-sizing: border-box;
         text-decoration: none;
-        font-family: "Nanum Gothic", sans-serif;
+        font-family: 'Nanum Gothic', sans-serif;
         font-weight: 600;
         font-size: 2rem;
         color: white;

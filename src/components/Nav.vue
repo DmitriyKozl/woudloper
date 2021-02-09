@@ -18,36 +18,36 @@
 
 <script>
 export default {
-  name: "Nav",
+  name: 'Nav',
   data() {
     return {
       sideNavIsActive: false,
       links: [
         {
-          label: "Home",
-          path: "/"
+          label: 'Home',
+          path: '/',
         },
         {
-          label: "We zijn we?",
-          path: "/wiezijnwe"
+          label: 'We zijn we?',
+          path: '/wie-zijn-we',
         },
         {
-          label: "Nieuws",
-          path: "/nieuws"
+          label: 'Nieuws',
+          path: '/nieuws',
         },
         {
-          label: "Contact",
-          path: "/contact"
+          label: 'Contact',
+          path: '/contact',
         },
         {
-          label: "Agenda",
-          path: "/agenda"
+          label: 'Agenda',
+          path: '/agenda',
         },
         {
-          label: "Praktisch",
-          path: "/praktisch"
-        }
-      ]
+          label: 'Praktisch',
+          path: '/praktisch',
+        },
+      ],
     };
   },
   methods: {
@@ -56,8 +56,8 @@ export default {
     },
     close() {
       this.sideNavIsActive = false;
-    }
-  }
+    },
+  },
 };
 </script>
 

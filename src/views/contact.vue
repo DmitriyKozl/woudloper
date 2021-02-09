@@ -50,39 +50,39 @@
 </template>
 
 <script>
-import Select from "@/components/select.vue";
+import Select from '@/components/Select.vue';
 export default {
-  name: "Contact",
+  name: 'Contact',
   components: {
-    Select
+    Select,
   },
 
   data: function() {
     return {
       mailFormIsActive: false,
 
-      name: "",
-      surname: "",
-      child: "",
+      name: '',
+      surname: '',
+      child: '',
       email: {
-        value: "",
-        valid: true
+        value: '',
+        valid: true,
       },
       phone: {
-        value: "",
-        valid: true
+        value: '',
+        valid: true,
       },
       message: {
         text: ``,
-        maxlength: 255
+        maxlength: 255,
       },
-      submitted: false
+      submitted: false,
     };
   },
 
   choices: [
     {
-      name: "wachtlijst",
+      name: 'wachtlijst',
       html: `<div class="form-phone" :class="{ active: mailFormIsActive }">
         <label class="label" for="phone">Telefoon nummer</label>
         <input name="phone" id="phone" required="" v-model="phone.value" />
@@ -96,10 +96,10 @@ export default {
           required=""
           v-model="child"
         />
-      </div>`
+      </div>`,
     },
     {
-      name: "wachtlijst",
+      name: 'wachtlijst',
       html: `<div class="form-phone" :class="{ active: mailFormIsActive }">
         <label class="label" for="phone">Telefoon nummer</label>
         <input name="phone" id="phone" required="" v-model="phone.value" />
@@ -113,20 +113,20 @@ export default {
           required=""
           v-model="child"
         />
-      </div>`
-    }
+      </div>`,
+    },
   ],
 
   methods: {
     activate() {
       this.mailFormIsActive = true;
-    }
-  }
+    },
+  },
 };
 </script>
 
 <style lang="scss" scoped>
-@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
 
 @mixin flexCenter() {
   display: flex;
@@ -214,7 +214,7 @@ export default {
         border-radius: 2rem;
         // box-sizing: border-box;
         text-decoration: none;
-        font-family: "Nanum Gothic", sans-serif;
+        font-family: 'Nanum Gothic', sans-serif;
         font-weight: 800;
         font-size: 1.4rem;
         color: #264653;

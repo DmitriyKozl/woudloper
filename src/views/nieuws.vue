@@ -51,10 +51,10 @@
 </template>
 
 <script>
-import Header from "@/components/Header";
+import Header from '@/components/Header';
 export default {
-  name: "Nieuws",
-  components: { Header }
+  name: 'Nieuws',
+  components: { Header },
 };
 </script>
 

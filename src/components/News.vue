@@ -7,7 +7,7 @@
     >
       <div
         :style="{
-          'background-image': 'url(' + require('@/assets/' + image.image) + ')'
+          'background-image': 'url(' + require('@/assets/' + image.image) + ')',
         }"
         class="preview_img"
       ></div>
@@ -20,38 +20,43 @@
 
 <script>
 export default {
-  name: "News",
+  name: 'News',
   data() {
     return {
       bgImages: [
         {
           id: 1,
-          name: "Totem",
-          text: "Brief Herstkamp",
-          image: "images/autumn.jpg"
+          name: 'Totem',
+          text: 'Brief Herstkamp',
+          image: 'images/autumn.jpg',
         },
         {
           id: 2,
-          name: "Totem",
-          text: "voorstelling Leiding",
-          image: "images/scout.jpg"
+          name: 'Totem',
+          text: 'voorstelling Leiding',
+          image: 'images/scout.jpg',
         },
         {
           id: 3,
-          name: "Totem",
-          text: "Inschrijving 2020-2021",
-          image: "images/letter.jpg"
+          name: 'Totem',
+          text: 'Inschrijving 2020-2021',
+          image: 'images/letter.jpg',
         },
         {
           id: 4,
-          name: "Totem",
-          text: "Info begin scoutsjaar",
-          image: "images/desk.jpg"
+          name: 'Totem',
+          text: 'Info begin scoutsjaar',
+          image: 'images/desk.jpg',
         },
-        { id: 5, name: "Totem", text: "Totem namen", image: "images/totem.jpg" }
-      ]
+        {
+          id: 5,
+          name: 'Totem',
+          text: 'Totem namen',
+          image: 'images/totem.jpg',
+        },
+      ],
     };
-  }
+  },
 };
 </script>
 
