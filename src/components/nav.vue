@@ -3,24 +3,26 @@
     <span class="hamburger" @click="activate()">&#9776;</span>
 
     <div :class="{ active: sideNavIsActive }" class="sidenav">
-      <a href="javascript:void(0)" class="closebtn" @click="close()">&times;</a>
-      <a href="#info">wie zijn we</a>
-      <a href="#home">home</a>
-      <a href="elements.html">nieuws</a>
-      <a href="index.html">contact</a>
-      <a href="generic.html">agenda</a>
-      <a href="index.html">praktisch</a>
+      <a class="closebtn" @click="close()">&times;</a>
+      <div
+        v-for="link in links"
+        :key="link.path"
+        :class="{ activeLink: $route.path === link.path }"
+        @click="close()"
+      >
+        <router-link :to="link.path">{{ link.label }}</router-link>
+      </div>
     </div>
   </header>
 </template>
 
 <script>
-
 export default {
-  name: "Nav",
+  name: 'Nav',
+  props: { links: { type: Array, required: true } },
   data() {
     return {
-      sideNavIsActive: false
+      sideNavIsActive: false,
     };
   },
   methods: {
@@ -29,8 +31,8 @@ export default {
     },
     close() {
       this.sideNavIsActive = false;
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -48,11 +50,9 @@ export default {
   transition: 0.5s;
   padding-top: 60px;
 }
-
 .active {
   width: 250px;
 }
-
 .sidenav a {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
@@ -61,24 +61,26 @@ export default {
   display: block;
   transition: 0.3s;
 }
-
 .sidenav a:hover {
   color: #f1f1f1;
 }
-
 .closebtn {
   position: absolute;
   top: 0;
   right: 25px;
   font-size: 36px;
   margin-left: 50px;
+  cursor: pointer;
 }
 .hamburger {
   font-size: 30px;
   cursor: pointer;
   position: absolute;
-  left: 5%;
+  left: 3%;
   top: 3rem;
   color: rgba(255, 255, 255, 0.787);
+}
+.activeLink {
+  font-weight: bold;
 }
 </style>
