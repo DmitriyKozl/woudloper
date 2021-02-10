@@ -2,15 +2,15 @@
   <Nav :links="links" />
   <Header :title="title" v-if="$route.path === '/nieuws'" />
   <router-view :title="title" />
-  <Footer />
+  <!-- <Footer /> -->
 </template>
 
 <script>
 import Nav from '@/components/Nav';
-import Footer from '@/components/Footer';
+// import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 export default {
-  components: { Header, Nav, Footer },
+  components: { Header, Nav },
   data() {
     return {
       links: [

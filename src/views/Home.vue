@@ -8,7 +8,7 @@
         </div>
       </div>
     </section>
-    <!-- <News /> -->
+    <News />
     <div class="preview_container">
       <section
         v-for="image in bgImages"
