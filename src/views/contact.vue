@@ -1,6 +1,6 @@
 <template>
-  <div class="container">
-    <div class="container-img">
+  <div class="containerContact">
+    <div class="containerContact-img">
       <img src="@/assets/images/tent.jpg" alt="" />
     </div>
     <ContactForm />
@@ -66,7 +66,7 @@ export default {
   display: flex;
   justify-content: center;
 }
-.container {
+.containerContact {
   background-color: #264653;
   // border: solid 0.2rem #264653;
   height: 100vh;

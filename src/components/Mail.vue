@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="Mailcontainer">
     <form class="form" @submit.prevent="submit">
       <h1>Contacteer ons</h1>
       <div class="form-content">
@@ -78,7 +78,7 @@ export default {
   display: flex;
   justify-content: center;
 }
-.container {
+.Mailcontainer {
   background-color: white;
   // border: solid 0.2rem #264653;
   border-left: none;

@@ -27,13 +27,15 @@
         </div>
       </section>
     </div>
+    <Mail />
   </div>
 </template>
 
 <script>
+import Mail from '@/components/Mail';
 export default {
   name: 'Home',
-  components: {},
+  components: { Mail },
   data() {
     return {
       bgImages: [
