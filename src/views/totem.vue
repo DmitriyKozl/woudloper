@@ -1,12 +1,13 @@
 <template>
-  <div>
-    <header><h1>Bestuur</h1></header>
+  <div class="totem">
     <div class="more_container" :class="{ active: on }">
       <div class="about">
         <div class="image">
           <img src="@/assets/images/Bedachtzame.jpeg" alt="" />
         </div>
         <div class="about_text">
+          <a class="closebtn" @click="close()">&times;</a>
+
           <h1>Bedachtzame Tapir</h1>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
@@ -37,6 +38,12 @@
 <script>
 export default {
   name: 'Totem',
+  props: {
+    title: {
+      type: String,
+      required: true,
+    },
+  },
   components: {},
   data() {
     return {
@@ -98,6 +105,9 @@ export default {
     activate() {
       this.on = true;
     },
+    close() {
+      this.on = false;
+    },
   },
 };
 </script>
@@ -108,6 +118,9 @@ export default {
   flex-direction: $direction;
   justify-content: center;
   align-content: center;
+}
+.totem {
+  position: relative;
 }
 header {
   @include flexCenter(row);
@@ -129,10 +142,11 @@ header {
   background-color: #264653b6;
   position: absolute;
   z-index: 2;
-  padding: 6rem 0;
+  padding: 3rem 0 6rem 0;
   @include flexCenter(row);
   .about {
     @include flexCenter(row);
+    position: relative;
     padding: 3rem;
     width: 60%;
     height: 70%;
@@ -157,5 +171,14 @@ header {
       }
     }
   }
+}
+.closebtn {
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  font-size: 36px;
+  margin-left: 50px;
+  color: white;
+  cursor: pointer;
 }
 </style>

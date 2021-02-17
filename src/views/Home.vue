@@ -9,68 +9,19 @@
       </div>
     </section>
     <News />
-    <div class="preview_container">
-      <section
-        v-for="image in bgImages"
-        :key="image.id"
-        @click="this.$router.push(image.name)"
-      >
-        <div
-          :style="{
-            'background-image':
-              'url(' + require('@/assets/' + image.image) + ')',
-          }"
-          class="preview_img"
-        ></div>
-        <div class="titleImage">
-          <h2>{{ image.text }}</h2>
-        </div>
-      </section>
-    </div>
     <Mail />
   </div>
 </template>
 
 <script>
+import News from '@/components/News';
+
 import Mail from '@/components/Mail';
 export default {
   name: 'Home',
-  components: { Mail },
+  components: { Mail, News },
   data() {
-    return {
-      bgImages: [
-        {
-          id: 1,
-          name: 'Totem',
-          text: 'Brief Herstkamp',
-          image: 'images/autumn.jpg',
-        },
-        {
-          id: 2,
-          name: 'Totem',
-          text: 'voorstelling Leiding',
-          image: 'images/scout.jpg',
-        },
-        {
-          id: 3,
-          name: 'Totem',
-          text: 'Inschrijving 2020-2021',
-          image: 'images/letter.jpg',
-        },
-        {
-          id: 4,
-          name: 'Totem',
-          text: 'Info begin scoutsjaar',
-          image: 'images/desk.jpg',
-        },
-        {
-          id: 5,
-          name: 'Totem',
-          text: 'Totem namen',
-          image: 'images/totem.jpg',
-        },
-      ],
-    };
+    return {};
   },
 };
 </script>

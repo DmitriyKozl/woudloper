@@ -5,6 +5,7 @@ import Nieuws from '@/views/nieuws';
 import Contact from '@/views/contact';
 import Agenda from '@/views/agenda';
 import Praktisch from '@/views/praktisch';
+import Totem from '@/views/totem';
 
 const routes = [
   {
@@ -36,6 +37,11 @@ const routes = [
     path: '/praktisch',
     name: 'Praktisch',
     component: Praktisch,
+  },
+  {
+    path: '/totem',
+    name: 'totem',
+    component: Totem,
   },
 ];
 

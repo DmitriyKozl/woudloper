@@ -235,6 +235,16 @@ export default {
     color: white;
     font-size: 1.2rem;
   }
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+    box-shadow: 0 0 0 30px #264653;
+    background-color: #264653 inset;
+    -webkit-box-shadow: 0 0 0 30px #264653 inset !important;
+    -webkit-text-fill-color: white !important;
+    -webkit-background-color: #264653 inset !important;
+  }
   label {
     font-size: 1.2rem;
   }
