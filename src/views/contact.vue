@@ -14,43 +14,6 @@ export default {
   components: {
     ContactForm,
   },
-  choices: [
-    {
-      name: 'wachtlijst',
-      html: `<div class="form-phone" :class="{ active: mailFormIsActive }">
-        <label class="label" for="phone">Telefoon nummer</label>
-        <input name="phone" id="phone" required="" v-model="phone.value" />
-      </div>
-      <div class="form-child">
-        <label class="label" for="child">Naam en voornaam kind</label>
-        <input
-          type="text"
-          name="childName"
-          id="child"
-          required=""
-          v-model="child"
-        />
-      </div>`,
-    },
-    {
-      name: 'wachtlijst',
-      html: `<div class="form-phone" :class="{ active: mailFormIsActive }">
-        <label class="label" for="phone">Telefoon nummer</label>
-        <input name="phone" id="phone" required="" v-model="phone.value" />
-      </div>
-      <div class="form-child">
-        <label class="label" for="child">Naam en voornaam kind</label>
-        <input
-          type="text"
-          name="childName"
-          id="child"
-          required=""
-          v-model="child"
-        />
-      </div>`,
-    },
-  ],
-
   methods: {
     activate() {
       this.mailFormIsActive = true;

@@ -47,7 +47,7 @@
       </select>
     </div>
 
-    <div v-if="selected === 'Question'" class="form-text">
+    <div v-if="selected === 'Question'" class="form-mailing">
       <label class="label" for="question-textarea">Bericht</label>
       <textarea
         class="message"
@@ -161,6 +161,10 @@ export default {
   padding: 1rem;
   flex-direction: column;
   width: 60%;
+  h1 {
+    color: white;
+    margin: 3rem;
+  }
   &-content {
     @include flexCenter();
     justify-content: space-between;
@@ -177,9 +181,7 @@ export default {
       color: white;
     }
   }
-  &-email,
-  &-phone,
-  &-child {
+  &-email {
     @include flexCenter();
     flex-direction: column;
     text-align: left;
@@ -187,22 +189,37 @@ export default {
     width: 70%;
     margin: 1rem auto;
   }
-  // .message,
-  // &-phone,
-  // &-child,
-  // &-text {
-  //   display: none;
-  // }
-  &-text {
+  &-phone,
+  &-child {
     @include flexCenter();
     flex-direction: column;
     text-align: left;
+    width: 40%;
+    color: white;
+  }
+
+  &-text {
+    @include flexCenter();
+    justify-content: space-between;
     color: white;
     width: 70%;
-    margin: 2rem auto;
+    text-align: left;
+    margin: 1rem auto;
+  }
+  &-mailing {
+    @include flexCenter();
+    justify-content: space-between;
+    color: white;
+    width: 70%;
+    text-align: left;
+    margin: 1rem auto;
+    flex-direction: column;
   }
   .message {
+    @include flexCenter();
+
     height: 100px;
+    width: 100%;
     outline: none;
     border: none;
     border-bottom: 1px solid white;
@@ -220,7 +237,7 @@ export default {
       text-decoration: none;
       font-family: 'Nanum Gothic', sans-serif;
       font-weight: 800;
-      font-size: 1.4rem;
+      font-size: 1.3rem;
       color: #264653;
       text-align: center;
       background-color: white;
@@ -234,6 +251,12 @@ export default {
     outline: none;
     color: white;
     font-size: 1.2rem;
+  }
+  .message:invalid {
+    box-shadow: none;
+  }
+  input:invalid {
+    box-shadow: none;
   }
   input:-webkit-autofill,
   input:-webkit-autofill:hover,

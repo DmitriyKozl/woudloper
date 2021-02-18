@@ -8,6 +8,7 @@
         </div>
       </div>
     </section>
+    <WieZijnWe />
     <News />
     <Mail />
   </div>
@@ -15,11 +16,12 @@
 
 <script>
 import News from '@/components/News';
+import WieZijnWe from '@/components/wie-zijn-we';
 
 import Mail from '@/components/Mail';
 export default {
   name: 'Home',
-  components: { Mail, News },
+  components: { Mail, News, WieZijnWe },
   data() {
     return {};
   },
@@ -42,7 +44,7 @@ export default {
   background-position: bottom;
   background-attachment: fixed;
   width: 100%;
-  height: 50vh;
+  height: 70vh;
 
   &__text {
     h2,
@@ -51,8 +53,8 @@ export default {
       font-size: 3rem;
       font-family: 'Nanum Gothic';
       font-weight: 600;
-      // color: rgba(255, 255, 255, 0.787);
-      color: white;
+      color: rgba(255, 255, 255, 0.787);
+      // color: white;
     }
   }
 }
