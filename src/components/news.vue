@@ -32,8 +32,8 @@ export default {
         },
         {
           id: 2,
-          path: '/totem',
-          text: 'voorstelling Leiding',
+          path: '/leden',
+          text: 'voorstelling leden',
           image: 'images/scout.jpg',
         },
         {
@@ -55,6 +55,11 @@ export default {
           image: 'images/totem.jpg',
         },
       ],
+      methods: {
+        scrollToTop() {
+          window.scrollTo(0, 0);
+        },
+      },
     };
   },
 };

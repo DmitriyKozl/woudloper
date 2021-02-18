@@ -1,4 +1,5 @@
 <template>
+  <ContactMap />
   <div class="containerContact">
     <div class="containerContact-img">
       <img src="@/assets/images/tent.jpg" alt="" />
@@ -8,11 +9,13 @@
 </template>
 
 <script>
+import ContactMap from '@/components/ContactMap.vue';
 import ContactForm from '@/components/ContactForm.vue';
 export default {
   name: 'Contact',
   components: {
     ContactForm,
+    ContactMap,
   },
   methods: {
     activate() {

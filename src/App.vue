@@ -2,6 +2,7 @@
   <Nav :links="links" />
   <!-- <Header :title="title" v-if="$route.path === links.label" /> -->
   <router-view :title="title" />
+
   <!-- <Footer /> -->
 </template>
 
@@ -42,6 +43,7 @@ export default {
       ],
     };
   },
+
   computed: {
     title() {
       return this.links.filter(val => {
