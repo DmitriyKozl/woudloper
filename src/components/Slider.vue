@@ -3,7 +3,7 @@
     <button class="c-slides__btn c-slides__btn--left" @click="clickLeft">
       &#10162;
     </button>
-    <div class="c-slides__container">
+    <div class="c-slides__container" @scroll="sliderScroll" ref="slider">
       <Slide v-for="slide in slides" :key="slide.index" :slide="slide" />
     </div>
     <button class="c-slides__btn c-slides__btn--right" @click="clickRight">
@@ -45,11 +45,55 @@ export default {
           newsContent: 'lorem ipsum6',
         },
       ],
+      sliderWidth: 0,
+      slideWidth: 0,
+      currentSlide: 0,
     };
   },
+  mounted() {
+    this.calcWidths();
+    window.addEventListener('resize', this.calcWidths);
+  },
+  unmounted() {
+    window.removeEventListener('resize', this.calcWidths);
+  },
+  computed: {
+    activeSlide() {
+      return this.slides[this.currentSlide];
+    },
+    slidesPerPage() {
+      return Math.round(this.sliderWidth / this.slideWidth);
+    },
+    numberOfPages() {
+      return this.slides.length + 1 - this.slidesPerPage;
+    },
+  },
   methods: {
-    clickLeft() {},
-    clickRight() {},
+    calcWidths() {
+      this.sliderWidth = this.$refs.slider.offsetWidth;
+      this.slideWidth = this.$refs.slider.children[0].offsetWidth;
+    },
+    clickLeft() {
+      console.log(this.$refs.slider.scrollLeft);
+      this.$refs.slider.scrollLeft =
+        this.$refs.slider.scrollLeft - this.slideWidth;
+    },
+    clickRight() {
+      this.$refs.slider.scrollLeft =
+        this.$refs.slider.scrollLeft + this.slideWidth;
+    },
+    slideTo(slideIndex) {
+      this.$refs.slider.scrollLeft = slideIndex * this.slideWidth;
+    },
+    sliderScroll(event) {
+      const scrollPos = event.target.scrollLeft;
+      if (scrollPos === 0) {
+        this.currentSlide = 0;
+      }
+      if (scrollPos % this.slideWidth === 0) {
+        this.currentSlide = scrollPos / this.slideWidth;
+      }
+    },
   },
 };
 </script>
