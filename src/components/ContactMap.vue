@@ -1,5 +1,5 @@
 <template>
-  <section class="banner_content">
+  <section class="map_content">
     <div class="banner_map"></div>
     <div class="banner_map_text">
       <h3>Wij ontvangen je met open armen</h3>
@@ -24,7 +24,7 @@ export default {
   align-items: center;
   flex-direction: $direction;
 }
-.banner_content {
+.map_content {
   @include flexCentered(row);
 
   width: 100%;

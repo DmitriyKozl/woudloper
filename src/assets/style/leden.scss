@@ -172,25 +172,7 @@
   // @include flexCenter(row);
 }
 
-.selectContainer {
-  @include flexCenter(column);
-  text-align: left;
-  color: white;
-  margin: 1rem auto;
-  &-control {
-    background-color: #264653;
-    border: none;
-    outline: none;
-    color: white;
-    margin: 0;
-    padding: 0;
-    font-size: 4rem;
-    width: 100%;
-  }
-  label {
-    font-size: 1.2rem;
-  }
-}
+
 footer {
   height: 75px;
   background: rgba(195,222,232,1);
