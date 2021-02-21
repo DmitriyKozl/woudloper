@@ -1,10 +1,14 @@
 <template>
   <div class="c-slides">
-    <button class="c-slides__btn c-slides__btn--left">&#10162;</button>
+    <button class="c-slides__btn c-slides__btn--left" @click="clickLeft">
+      &#10162;
+    </button>
     <div class="c-slides__container">
       <Slide v-for="slide in slides" :key="slide.index" :slide="slide" />
     </div>
-    <button class="c-slides__btn c-slides__btn--right">&#10162;</button>
+    <button class="c-slides__btn c-slides__btn--right" @click="clickRight">
+      &#10162;
+    </button>
   </div>
 </template>
 
@@ -42,6 +46,10 @@ export default {
         },
       ],
     };
+  },
+  methods: {
+    clickLeft() {},
+    clickRight() {},
   },
 };
 </script>

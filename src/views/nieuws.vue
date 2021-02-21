@@ -4,7 +4,8 @@
       <h1>Laatste nieuwtjes</h1>
 
       <div class="news">
-        <div class="block">
+        <Slider />
+        <!-- <div class="block">
           <div class="block__title">
             <h2>Voorstelling Leiding</h2>
           </div>
@@ -84,7 +85,7 @@
               </p>
             </div>
           </div>
-        </div>
+        </div> -->
         <!-- <h1>Meer nieuws</h1>
         <div class="newsList">
           <div class="block">
@@ -99,8 +100,10 @@
 </template>
 
 <script>
+import Slider from '@/components/Slider';
 export default {
   name: 'Nieuws',
+  components: { Slider },
   props: {
     title: {
       type: String,
