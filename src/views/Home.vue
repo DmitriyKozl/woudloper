@@ -27,39 +27,4 @@ export default {
   },
 };
 </script>
-<style lang="scss">
-@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
-
-@mixin flexCentered($direction) {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: $direction;
-}
-
-.banner {
-  background-image: url('../assets/images/forest.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: bottom;
-  background-attachment: fixed;
-  width: 100%;
-  height: 70vh;
-
-  &__text {
-    h2,
-    p {
-      // margin: 0;
-      font-size: 3rem;
-      font-family: 'Nanum Gothic';
-      font-weight: 600;
-      color: rgba(255, 255, 255, 0.787);
-      // color: white;
-    }
-  }
-}
-
-.content {
-  @include flexCentered(column);
-}
-</style>
+<style lang="scss"></style>

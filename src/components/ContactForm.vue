@@ -164,6 +164,14 @@ export default {
   h1 {
     color: white;
     margin: 3rem;
+    &::after {
+      display: block;
+      content: ' ';
+      width: 50px;
+      height: 5px;
+      background-color: white;
+      margin: 1rem auto;
+    }
   }
   &-content {
     @include flexCenter();

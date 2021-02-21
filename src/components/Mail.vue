@@ -1,7 +1,7 @@
 <template>
   <div class="Mailcontainer">
     <form class="form" @submit.prevent="submit">
-      <h1>Contacteer ons</h1>
+      <h4>Contacteer ons</h4>
       <div class="form-content">
         <div class="form-content-name">
           <label class="label" for="name">Naam</label>
@@ -72,28 +72,31 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
-
 @mixin flexCenter() {
   display: flex;
   justify-content: center;
 }
 .Mailcontainer {
   background-color: white;
-  // border: solid 0.2rem #264653;
-  border-left: none;
-  height: 60vh;
   @include flexCenter();
-  h1 {
+  h4 {
     width: 70%;
     color: white;
-    text-align: left;
-    margin: 2rem auto;
+    margin: auto;
+    font-size: 2rem;
+    &::after {
+      display: block;
+      content: ' ';
+      width: 50px;
+      height: 5px;
+      background-color: white;
+      margin: 1rem auto;
+    }
   }
   .form {
     @include flexCenter();
     background-color: #264653;
-    padding: 1rem;
+    padding: 2rem 1rem;
     flex-direction: column;
     width: 60%;
     &-content {

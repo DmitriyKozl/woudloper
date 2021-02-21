@@ -1,9 +1,9 @@
 <template>
   <div class="info">
-    <h1>Wie zijn wij nu eigenlijk</h1>
+    <h2>Wie zijn wij nu eigenlijk</h2>
     <div class="info_content">
       <div class="info_content_left">
-        <h2>Lorem</h2>
+        <h3>Lorem</h3>
         <p>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor omnis
           nesciunt, vero vitae veritatis quam, perspiciatis necessitatibus,
@@ -14,7 +14,7 @@
         </p>
       </div>
       <div class="info_content_right">
-        <h2>Lorem</h2>
+        <h3>Lorem</h3>
         <p>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor omnis
           nesciunt, vero vitae veritatis quam, perspiciatis necessitatibus,
@@ -39,13 +39,21 @@ export default {
   text-align: left;
   margin: auto;
   background-color: #264653;
-  h1 {
-    text-align: left;
+  h2 {
     max-width: 1200px;
+    text-align: center;
     margin: auto;
     padding: 2rem 1rem 0;
     font-size: 2.5rem;
     color: white;
+    &::after {
+      display: block;
+      content: ' ';
+      width: 50px;
+      height: 5px;
+      background-color: white;
+      margin: 1rem auto;
+    }
   }
   .info_content {
     display: flex;
@@ -58,7 +66,7 @@ export default {
     &_right {
       color: white;
       padding: 1rem 2rem 3rem 0;
-      h2 {
+      h3 {
         font-size: 2rem;
       }
       p {
