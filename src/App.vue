@@ -1,16 +1,17 @@
 <template>
   <Nav :links="links" />
-  <Header :title="title" v-if="$route.path === '/nieuws'" />
+  <!-- <Header :title="title" v-if="$route.path === links.label" /> -->
   <router-view :title="title" />
-  <Footer />
+
+  <!-- <Footer /> -->
 </template>
 
 <script>
 import Nav from '@/components/Nav';
-import Footer from '@/components/Footer';
-import Header from '@/components/Header';
+// import Footer from '@/components/Footer';
+// import Header from '@/components/Header';
 export default {
-  components: { Header, Nav, Footer },
+  components: { Nav },
   data() {
     return {
       links: [
@@ -18,10 +19,7 @@ export default {
           label: 'Home',
           path: '/',
         },
-        {
-          label: 'We zijn we?',
-          path: '/wie-zijn-we',
-        },
+
         {
           label: 'Nieuws',
           path: '/nieuws',
@@ -38,9 +36,14 @@ export default {
           label: 'Praktisch',
           path: '/praktisch',
         },
+        {
+          label: 'Leden',
+          path: '/leden',
+        },
       ],
     };
   },
+
   computed: {
     title() {
       return this.links.filter(val => {

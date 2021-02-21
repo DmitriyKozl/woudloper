@@ -1,0 +1,92 @@
+@mixin flexCenter() {
+  display: flex;
+  justify-content: center;
+}
+
+.contact {
+  background-color: #264653;
+  // border: solid 0.2rem #264653;
+  height: 100vh;
+  @include flexCenter();
+  &-img {
+    width: 40%;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  h1 {
+    width: 70%;
+    color: white;
+    margin: 2rem auto;
+  }
+}
+footer {
+  @include flexCenter();
+  flex-direction: column;
+
+  .footerContent {
+    flex: 1;
+    .footerText {
+      height: 200px;
+      @include flexCenter();
+      background: rgb(38, 70, 83);
+    
+      color: white;
+      h2 {
+        margin: auto;
+        font-size: 3rem;
+
+        &::after {
+          display: block;
+          content: ' ';
+          width: 100px;
+          height: 5px;
+          background-color: white;
+          margin: 1rem auto;
+        }
+      }
+    }
+  }
+}
+.contactInfo {
+  @include flexCenter();
+  .left,
+  .right {
+    background-color: #264653;
+
+    padding: 2rem;
+    @include flexCenter();
+    flex-direction: column;
+    width: 50%;
+    h4 {
+      font-size: 2rem;
+      width: 100%;
+      margin: 0;
+      color: white;
+
+      &::after {
+        display: block;
+        content: ' ';
+        width: 50px;
+        height: 5px;
+        background-color: white;
+        margin: 1rem auto;
+      }
+    }
+  }
+  ul {
+    @include flexCenter();
+    flex-direction: column;
+
+    padding: 2rem 3rem 0;
+
+    list-style: none;
+    li {
+      width: 100%;
+      margin-bottom: 1rem;
+      color: white;
+    }
+  }
+}

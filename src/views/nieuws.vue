@@ -1,50 +1,99 @@
 <template>
   <div>
-    <section class="news">
-      <section class="newest">
-        <div class="news__header">
-          <p>Laatste nieuwtjes</p>
-        </div>
-        <div class="newest__items">
-          <div class="newest__item">
-            <div class="newest-item__text">
-              <h3>Voorstelling Leiding</h3>
-              <p>
+    <section class="container newsList">
+      <h1>Laatste nieuwtjes</h1>
+
+      <div class="news">
+        <div class="block ">
+          <div class="block__title ">
+            <h2>Voorstelling Leiding</h2>
+          </div>
+          <div class="block__item ">
+            <div class="block__item__text ">
+              <p class="text ">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                 Accusantium, consectetur magni! Obcaecati accusantium eos vero
                 illo ab ut nostrum sapiente eum. Odio iste reiciendis obcaecati
-                dolores doloremque praesentium ea explicabo.
+                dolores doloremque praesentium ea explicabo.<br /><br />
+                <a href="" class="more">Lees verder</a>
               </p>
-              <button type="button">Lees verder</button>
+
+              <p class="fullText ">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Accusantium, consectetur magni! Obcaecati accusantium eos vero
+                illo ab ut nostrum sapiente eum. Odio iste reiciendis obcaecati
+                dolores doloremque praesentium ea explicabo. Lorem ipsum dolor
+                sit, amet consectetur adipisicing elit. Accusantium, consectetur
+                magni! Obcaecati accusantium eos vero illo ab ut nostrum
+                sapiente eum. Odio iste reiciendis obcaecati dolores doloremque
+                praesentium ea explicabo.
+              </p>
             </div>
           </div>
-          <div class="newest__item">
-            <div class="newest-item__text">
-              <h3>Brief Herfstkamp</h3>
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel
-                fugiat sed, natus odio necessitatibus, harum aliquid dolor
-                officiis molestias qui sit sequi distinctio, et nemo accusamus
-                voluptatem enim commodi illo.
+        </div>
+        <div class="block ">
+          <div class="block__title ">
+            <h2>Voorstelling Leiding</h2>
+          </div>
+          <div class="block__item ">
+            <div class="block__item__text ">
+              <p class="text ">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Accusantium, consectetur magni! Obcaecati accusantium eos vero
+                illo ab ut nostrum sapiente eum. Odio iste reiciendis obcaecati
+                dolores doloremque praesentium ea explicabo.<br /><br />
+                <a href="" class="more">Lees verder</a>
               </p>
-              <button type="button">Lees verder</button>
+
+              <p class="fullText ">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Accusantium, consectetur magni! Obcaecati accusantium eos vero
+                illo ab ut nostrum sapiente eum. Odio iste reiciendis obcaecati
+                dolores doloremque praesentium ea explicabo. Lorem ipsum dolor
+                sit, amet consectetur adipisicing elit. Accusantium, consectetur
+                magni! Obcaecati accusantium eos vero illo ab ut nostrum
+                sapiente eum. Odio iste reiciendis obcaecati dolores doloremque
+                praesentium ea explicabo.
+              </p>
             </div>
           </div>
         </div>
-      </section>
-      <section class="older">
-        <div class="news__header">
-          <p>Meer nieuws</p>
-        </div>
-        <div class="older__items">
-          <div class="older__item"></div>
-          <div class="older__item"></div>
-          <div class="next-item">
-            <p>Lees meer nieuws</p>
-            <span class="arrow">&#10140;</span>
+        <div class="block ">
+          <div class="block__title ">
+            <h2>Voorstelling Leiding</h2>
+          </div>
+          <div class="block__item ">
+            <div class="block__item__text ">
+              <p class="text ">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Accusantium, consectetur magni! Obcaecati accusantium eos vero
+                illo ab ut nostrum sapiente eum. Odio iste reiciendis obcaecati
+                dolores doloremque praesentium ea explicabo.<br /><br />
+                <a href="" class="more">Lees verder</a>
+              </p>
+
+              <p class="fullText ">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Accusantium, consectetur magni! Obcaecati accusantium eos vero
+                illo ab ut nostrum sapiente eum. Odio iste reiciendis obcaecati
+                dolores doloremque praesentium ea explicabo. Lorem ipsum dolor
+                sit, amet consectetur adipisicing elit. Accusantium, consectetur
+                magni! Obcaecati accusantium eos vero illo ab ut nostrum
+                sapiente eum. Odio iste reiciendis obcaecati dolores doloremque
+                praesentium ea explicabo.
+              </p>
+            </div>
           </div>
         </div>
-      </section>
+        <!-- <h1>Meer nieuws</h1>
+        <div class="newsList">
+          <div class="block">
+            <div class="block__item"></div>
+            <div class="block__item"></div>
+            <div class="block__item"></div> -->
+        <!-- </div> -->
+        <!-- </div> -->
+      </div>
     </section>
   </div>
 </template>
@@ -57,131 +106,84 @@ export default {
       type: String,
       required: true,
     },
+    data() {
+      return {
+        open: false,
+      };
+    },
+    methods: {
+      activate() {
+        this.on === true;
+      },
+    },
   },
 };
 </script>
 
 <style lang="scss" scoped>
-@mixin flexCentered() {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-header {
-  @include flexCentered();
-  width: 100%;
-  height: 150px;
-  background-color: #264653;
-  h1 {
-    font-size: 4rem;
-    color: white;
-    margin: 1.5rem auto auto 10rem;
+.block {
+  ::-webkit-scrollbar-track {
+    // box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #264653;
+    // background-color: white;
+    border-radius: 15px;
   }
-}
 
-.news__header {
-  border: solid 1px black;
-  border-top: solid 10px #264653;
-  margin-bottom: 2rem;
-  text-align: start;
-  display: flex;
-  align-items: center;
-
-  p {
-    padding-left: 1rem;
-    font-weight: bold;
-    font-size: 2rem;
+  ::-webkit-scrollbar {
+    width: 0.2rem;
+    // background-color: #264653;
+    background-color: white;
+    border-radius: 15px;
   }
-}
 
-.newest {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
-  margin-bottom: 8rem;
+  ::-webkit-scrollbar-thumb {
+    // background-color: #264653;
+    background-color: white;
+    border-radius: 15px;
+  }
+  .block__item.active {
+    overflow: scroll;
+    overflow-x: hidden;
+    flex: 1 1 300px;
+    max-width: 350px;
+    border-radius: 16px;
+    margin: 0 2rem;
+    background-color: #264653;
+    border-radius: 15px;
+    border-bottom-right-radius: 0;
+    .block__item__title.active {
+      background-color: white;
 
-  .newest__items {
-    display: flex;
-    justify-content: space-between;
-
-    .newest__item {
-      height: 400px;
-      width: calc((100% / 2) - 1rem);
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: cover;
-      background-image: url(../assets/images/letter.jpg);
-      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.07),
-        0 4px 8px rgba(0, 0, 0, 0.07), 0 8px 16px rgba(0, 0, 0, 0.07),
-        0 16px 32px rgba(0, 0, 0, 0.07), 0 32px 64px rgba(0, 0, 0, 0.07);
+      h2 {
+        font-size: 1.7rem;
+        margin-right: auto;
+        margin-top: 0;
+        color: #264653;
+        background-color: white;
+        margin-top: 0;
+        width: 100%;
+        border-radius: 15px;
+        border-bottom-right-radius: 0;
+      }
     }
-
-    .newest-item__text {
-      width: 40%;
-      height: 80%;
-      background-color: rgb(15, 15, 15, 0.8);
+    &__text.active {
+      margin: 1rem;
       color: white;
-      padding: 1rem;
-      text-align: start;
-      position: relative;
-      p {
-        color: white;
-      }
-      button {
-        background-color: #264653;
-        position: absolute;
-        right: 1rem;
-        bottom: 1rem;
-        padding: 1rem;
-        border: none;
-        color: white;
-      }
     }
+    .fullText.active {
+      display: block;
+      color: white;
+    }
+  }
+  .text.active {
+    font-weight: bolder;
+    line-height: 1.3;
+    color: white;
   }
 }
 
-.older {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
-  margin-bottom: 8rem;
-
-  .older__items {
-    display: flex;
-    justify-content: space-between;
-
-    .older__item {
-      height: 400px;
-      width: calc((100% / 3) - 1.5rem);
-      background-color: gray;
-      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.07),
-        0 4px 8px rgba(0, 0, 0, 0.07), 0 8px 16px rgba(0, 0, 0, 0.07),
-        0 16px 32px rgba(0, 0, 0, 0.07), 0 32px 64px rgba(0, 0, 0, 0.07);
-    }
-
-    .next-item {
-      height: 400px;
-      width: calc((100% / 3) - 1.5rem);
-      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.07),
-        0 4px 8px rgba(0, 0, 0, 0.07), 0 8px 16px rgba(0, 0, 0, 0.07),
-        0 16px 32px rgba(0, 0, 0, 0.07), 0 32px 64px rgba(0, 0, 0, 0.07);
-      background-image: linear-gradient(to bottom right, #264653, 30%, #533326);
-
-      position: relative;
-      p {
-        text-align: left;
-        font-size: 3rem;
-        padding-left: 2rem;
-        color: black;
-      }
-      span {
-        font-size: 8rem;
-        position: absolute;
-        bottom: 1rem;
-        right: 1rem;
-        color: black;
-      }
-    }
-  }
+a {
+  text-decoration: none;
+  color: #264653;
 }
 </style>

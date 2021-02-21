@@ -1,10 +1,10 @@
 import { createRouter, createWebHashHistory } from 'vue-router';
 import Home from '@/views/home';
-import WieZijnWe from '@/views/wie-zijn-we';
 import Nieuws from '@/views/nieuws';
 import Contact from '@/views/contact';
 import Agenda from '@/views/agenda';
 import Praktisch from '@/views/praktisch';
+import Leden from '@/views/leden';
 
 const routes = [
   {
@@ -12,11 +12,7 @@ const routes = [
     name: 'Home',
     component: Home,
   },
-  {
-    path: '/wie-zijn-we',
-    name: 'WieZijnWe',
-    component: WieZijnWe,
-  },
+
   {
     path: '/nieuws',
     name: 'Nieuws',
@@ -36,6 +32,11 @@ const routes = [
     path: '/praktisch',
     name: 'Praktisch',
     component: Praktisch,
+  },
+  {
+    path: '/leden',
+    name: 'leden',
+    component: Leden,
   },
 ];
 
