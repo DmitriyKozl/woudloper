@@ -235,7 +235,9 @@ export default {
     color: white;
   }
   .button {
-    // margin: auto;
+    width: 70%;
+    text-align: left;
+    margin: 2rem auto 0;
     button {
       padding: 0.5rem 3rem 0.5rem 3rem;
       margin: 1rem 0.1rem 0.1rem 0;

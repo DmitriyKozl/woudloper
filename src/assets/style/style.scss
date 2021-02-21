@@ -1,6 +1,9 @@
 
 @import 'normalize.css';
 @import 'home_banner.scss';
+@import 'contact.scss';@import 'leden.scss';
+
+
 @mixin flexCenter($direction) {
   display: flex;
   flex-direction: $direction;

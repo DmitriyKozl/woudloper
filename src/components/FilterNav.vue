@@ -84,14 +84,14 @@ export default {
   position: absolute;
   left: 11.5%;
   bottom: 1rem;
-  color: #264653;
+  color: white;
 
   &::after {
     display: block;
     content: ' ';
     width: 60px;
     height: 5px;
-    background-color: #264653;
+    background-color: white;
     margin: 0 auto;
   }
 }
