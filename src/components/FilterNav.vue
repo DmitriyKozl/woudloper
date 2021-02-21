@@ -1,24 +1,31 @@
 <template>
   <div>
-    <span class="hamburger" @click="activate()">&#9776;</span>
-
     <div :class="{ active: sideNavIsActive }" class="sidenav">
       <a class="closebtn" @click="close()">&times;</a>
       <div
         v-for="link in links"
         :key="link.path"
-        :class="{ activeLink: $route.path === link.path }"
+        class="buttonContainer"
         @click="close()"
       >
-        <router-link :to="link.path">{{ link.label }}</router-link>
+        <div class="button">
+          <input type="submit" value="bestuur" />
+        </div>
+        <div class="button">
+          <input type="submit" value="svg" />
+        </div>
+        <div class="button">
+          <input type="submit" value="vg" />
+        </div>
       </div>
     </div>
+    <a class="hamburger" @click="activate()">filter</a>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Nav',
+  name: 'FilterNav',
   props: { links: { type: Array, required: true } },
   data() {
     return {
@@ -39,33 +46,30 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .sidenav {
-  height: 100%;
+  height: 100px;
   width: 0;
-  position: fixed;
+  // position: fixed;
   z-index: 1;
   top: 0;
   left: 0;
   // background-color: #264653;
-  background-color: white;
+  background-color: #264653;
 
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
 }
 .active {
-  width: 250px;
+  width: 100%;
 }
 .sidenav a {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 25px;
-  color: #264653;
   display: block;
   transition: 0.3s;
 }
-.sidenav a:hover {
-  color: #f1f1f1;
-}
+
 .closebtn {
   position: absolute;
   top: 0;
@@ -75,12 +79,21 @@ export default {
   cursor: pointer;
 }
 .hamburger {
-  font-size: 30px;
+  font-size: 2rem;
   cursor: pointer;
   position: absolute;
-  left: 3%;
-  top: 3rem;
-  color: rgba(255, 255, 255, 0.787);
+  left: 11.5%;
+  bottom: 1rem;
+  color: white;
+
+  &::after {
+    display: block;
+    content: ' ';
+    width: 60px;
+    height: 5px;
+    background-color: white;
+    margin: 0 auto;
+  }
 }
 .activeLink {
   font-weight: bold;

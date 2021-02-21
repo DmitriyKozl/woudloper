@@ -1,9 +1,5 @@
 <template>
   <div>
-    <header>
-      <h1>{{ title }}</h1>
-    </header>
-
     <section class="container eventList">
       <h1>2022</h1>
       <div v-for="event in events" :key="event.text" class="eventList__item">
