@@ -1,14 +1,16 @@
 <template>
   <div class="c-slides">
-    <button class="c-slides__btn c-slides__btn--left" @click="clickLeft">
-      &#10162;
-    </button>
+    <button
+      class="c-slides__btn c-slides__btn--left"
+      @click="clickLeft"
+    ></button>
     <div class="c-slides__container" @scroll="sliderScroll" ref="slider">
       <Slide v-for="slide in slides" :key="slide.index" :slide="slide" />
     </div>
-    <button class="c-slides__btn c-slides__btn--right" @click="clickRight">
-      &#10162;
-    </button>
+    <button
+      class="c-slides__btn c-slides__btn--right"
+      @click="clickRight"
+    ></button>
   </div>
 </template>
 
@@ -101,21 +103,21 @@ export default {
 <style lang="scss">
 .c-slides {
   position: relative;
-  //   width: 100%;
+  width: 100%;
   overflow-x: hidden;
-  background-color: #264653;
+  margin: 2rem 0 2rem;
 
   &__container {
-    display: flex;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(6, calc((100% - 3rem) / 3));
+    grid-column-gap: 1.5rem;
     overflow-x: scroll;
-    width: 100vw;
+    width: 70%;
     scroll-snap-type: x mandatory;
     overflow: -moz-scrollbars-none;
     -ms-overflow-style: none;
     scrollbar-color: transparent transparent;
-    height: 25rem;
-    margin-left: 1rem;
+    margin: auto;
 
     &::-webkit-scrollbar {
       width: 0 !important;
@@ -124,27 +126,29 @@ export default {
   }
 
   .c-slides__btn {
-    color: white;
-    font-size: 3rem;
-    width: 4rem;
-    height: 4rem;
-    background-color: #264653;
-    border-radius: 50%;
-    border: none;
-    outline: none;
+    width: 48px;
+    height: 48px;
+    border-color: #000;
     position: absolute;
-    top: 8%;
-    margin-top: -1rem;
-    left: 2rem;
+    top: 50%;
+    margin-top: -31px;
     cursor: pointer;
+    border-top: none;
+    border-right: none;
+    background-color: white;
 
     &--right {
+      border-bottom: 6px solid;
+      border-left: 6px solid;
+      transform: rotate(-135deg);
       right: 2rem;
-      left: unset;
     }
 
     &--left {
-      transform: rotate(180deg);
+      border-bottom: 6px solid;
+      border-left: 6px solid;
+      transform: rotate(45deg);
+      left: 2rem;
     }
   }
 }
