@@ -9,14 +9,16 @@
         <Slider />
       </div>
     </section>
+    <actualFooter />
   </div>
 </template>
 
 <script>
 import Slider from '@/components/Slider';
+import actualFooter from '@/components/actualFooter.vue';
 export default {
   name: 'Nieuws',
-  components: { Slider },
+  components: { Slider, actualFooter },
   props: {
     title: {
       type: String,
@@ -36,4 +38,8 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.container {
+  padding-top: 0;
+}
+</style>

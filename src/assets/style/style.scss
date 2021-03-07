@@ -115,7 +115,6 @@ $shadow: 0 1px 2px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.07),
   }
   .news {
     @include flexCenter(row);
-    background-color: white;
 
     .block {
       height: 15rem;
@@ -138,6 +137,7 @@ $shadow: 0 1px 2px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.07),
         // width: 100%;
         border-radius: 15px;
         border-bottom-right-radius: 0;
+        border: 10px solid white;
         // border-bottom: 0;
         // max-width: 350px;
         // margin: auto;
@@ -297,5 +297,5 @@ $shadow: 0 1px 2px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.07),
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  height: 20rem;
+  height: 500px;
 }

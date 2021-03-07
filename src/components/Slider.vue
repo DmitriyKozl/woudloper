@@ -128,14 +128,14 @@ export default {
   .c-slides__btn {
     width: 48px;
     height: 48px;
-    border-color: #000;
+    color: white;
     position: absolute;
     top: 50%;
     margin-top: -31px;
     cursor: pointer;
     border-top: none;
     border-right: none;
-    background-color: white;
+    background-color: #264653;
 
     &--right {
       border-bottom: 6px solid;
