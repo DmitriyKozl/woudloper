@@ -4,6 +4,7 @@
       <div class="banner">
         <div class="banner__text">
           <h2>Scoutsgroep</h2>
+          <div class="img"></div>
           <p>Lorem ipsum dolor sit amet. amet.</p>
         </div>
       </div>

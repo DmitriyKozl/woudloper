@@ -9,6 +9,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
+  position: relative;
 }
 .banner_content {
   max-width: 1200px;
@@ -51,9 +52,8 @@
 }
 .leden {
   padding: 4rem 0;
-  background: linear-gradient(
-    176deg,
-    #072736, rgba(38,70,83,1) 17%, rgba(158,186,197,1) 57%, rgba(180,207,218,1) 70%, rgba(195,222,232,1) 94%);
+  position: relative;
+
  
   .bestuur {
     width: 100%;
@@ -61,7 +61,7 @@
     h1 {
       margin-top: 0;
       text-align: center;
-
+      color: #264653;
       &::after {
         display: block;
         content: ' ';

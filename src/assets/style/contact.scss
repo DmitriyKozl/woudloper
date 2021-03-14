@@ -25,15 +25,36 @@
 footer {
   @include flexCenter();
   flex-direction: column;
+  position: relative;
+  .custom-shape-divider-top-1614761612 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1614761612 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 116px;
+}
+
+.custom-shape-divider-top-1614761612 .shape-fill {
+    fill: #264653;
+}
 
   .footerContent {
     flex: 1;
     .footerText {
-      height: 200px;
+      height: 400px;
       @include flexCenter();
-      background: rgb(38, 70, 83);
+  
+      background: white;
     
-      color: white;
+      color: #264653;
       h2 {
         margin: auto;
         font-size: 3rem;
@@ -52,10 +73,13 @@ footer {
 }
 .contactInfo {
   @include flexCenter();
+  
   .left,
   .right {
-    background-color: #264653;
-
+    // background-color: #264653;
+    background: white;
+    
+      color: #264653;
     padding: 2rem;
     @include flexCenter();
     flex-direction: column;
@@ -64,14 +88,14 @@ footer {
       font-size: 2rem;
       width: 100%;
       margin: 0;
-      color: white;
+      color: #264653;
 
       &::after {
         display: block;
         content: ' ';
         width: 50px;
         height: 5px;
-        background-color: white;
+        background-color: #264653;
         margin: 1rem auto;
       }
     }
@@ -87,6 +111,9 @@ footer {
       width: 100%;
       margin-bottom: 1rem;
       color: white;
+      background: white;
+      font-weight: 600;
+      color: #264653;
     }
   }
 }

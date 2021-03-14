@@ -81,6 +81,7 @@ export default {
   left: 3%;
   top: 3rem;
   color: rgba(255, 255, 255, 0.787);
+  z-index: 444;
 }
 .activeLink {
   font-weight: bold;
