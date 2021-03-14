@@ -48,7 +48,6 @@ export default {
 .sidenav {
   height: 100px;
   width: 0;
-  // position: fixed;
   z-index: 1;
   top: 0;
   left: 0;
@@ -60,7 +59,9 @@ export default {
   padding-top: 60px;
 }
 .active {
-  width: 100%;
+  width: 15%;
+  height: 100vh;
+  position: absolute;
 }
 .sidenav a {
   padding: 8px 8px 8px 32px;
@@ -84,7 +85,7 @@ export default {
   position: absolute;
   left: 11.5%;
   bottom: 1rem;
-  color: white;
+  color: #264653;
 
   &::after {
     display: block;

@@ -25,6 +25,15 @@
       // color: white;
     }
   }
+  .img{
+    background-image: url('../images/icom.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 200px;
+    height: 200px;
+    margin: auto;
+  }
 }
 
 .content {

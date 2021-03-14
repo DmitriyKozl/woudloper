@@ -1,9 +1,9 @@
 <template>
   <section class="map_content">
-    <div class="banner_map"></div>
+    <!-- <div class="banner_map"></div>
     <div class="banner_map_text">
       <h3>Wij ontvangen je met open armen</h3>
-    </div>
+    </div> -->
   </section>
 </template>
 
@@ -26,8 +26,10 @@ export default {
 }
 .map_content {
   @include flexCentered(row);
+  position: relative;
 
   width: 100%;
+
   .banner_map {
     background-image: url('../assets/images/map.jpg');
     background-size: cover;
